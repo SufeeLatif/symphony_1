@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Welcome {{ person.name }}!{% endblock %}
+
+{% block body %}
+<h1>Hello {{ person.name }}</h1>
+<h1>Age {{ person.age }}</h1>
+
+<h2>User Form</h2>
+
+    {#{{ form(user_form) }}#}
+
+{{ form_start(user_form) }}
+{{ form_label(user_form.fullname) }}
+{#{{ form_row(user_form.fullname) }}#}
+{{ form_widget(user_form.fullname) }}
+{{ form_end(user_form) }}
+
+{% endblock %}
